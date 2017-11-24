@@ -5,10 +5,18 @@ bsObj = BeautifulSoup(html.read(), 'html.parser')
 
 
 lista = bsObj.findAll('div')
-for text in lista:
-    pesquisa = str(text)
-    print("*" * 100)
-    if pesquisa.find("Anitta") == -1:
-        print("No 'is' here!")
+
+
+for item in lista:
+
+    item_str = str(item)
+
+    if item_str.find('Fla') == -1:
+        pass
+    elif 'background-image' in item_str:
+        pass
     else:
-        print(text.getText())
+        print(item.getText())
+        print("*" * 100)
+
+

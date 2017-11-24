@@ -2,4 +2,5 @@
 from urllib.request import urlopen
 # trazer a página inteira
 html = urlopen("http://www.globo.com/")
-print(html.read())
+html_aberto = html.read()
+print(html_aberto)
